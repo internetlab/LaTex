@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage{lipsum}
 \usepackage{blindtext}
-
+\usepackage{imakeidx}
+\makeindex[columns=3, title=Index]
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \title{\LaTeX Document Template}
@@ -79,6 +80,11 @@
         
         \subsection{Another Subsection}
     		\blindtext
+    		
+    		\subsection{Some Indices}
+	In this example several keywords\index{keywords} will be used which are important and deserve to appear in the Index\index{Index}.
+ 
+	Terms like generate\index{generate} and some\index{others} will also show up. Terms in the index can also be nested \index{Index!nested}
 
 %
 % Chapter 2 - Fact Finding
@@ -130,6 +136,9 @@
 
   \end{thebibliography}
   
-
+% index
+	\newpage
+	\printindex
+	
 \end{document}
 
